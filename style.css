@@ -1,0 +1,235 @@
+/* General styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Amiri', serif;
+}
+
+body {
+  background-color: #f0f4f8;
+  color: #222;
+  line-height: 1.6;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3 {
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+/* Navigation */
+header {
+  background-color: #003366;
+  color: #fff;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  font-weight: bold;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  border-radius: 50%;
+  background-color: #fff;
+  padding: 5px;
+}
+
+.logo-text {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Hero section */
+.hero {
+  background: url('images/kaaba.jpg') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background-color: #0077cc;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #005fa3;
+}
+
+/* About section */
+.about, .packages, .booking, .contact {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.about h2, .packages h2, .booking h2, .contact h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #003366;
+}
+
+/* Packages */
+.package-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.package {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.package:hover {
+  transform: translateY(-5px);
+}
+
+.package-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.package h3 {
+  color: #0077cc;
+  margin-top: 5px;
+}
+
+/* Booking Form */
+.booking form {
+  display: grid;
+  gap: 15px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.booking input,
+.booking select,
+.booking textarea,
+.booking button {
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+.booking button {
+  background-color: #0077cc;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.booking button:hover {
+  background-color: #005fa3;
+}
+
+/* Contact */
+.contact-links {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Footer */
+footer {
+  background-color: #003366;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* Urdu Toggle Support */
+body.urdu {
+  direction: rtl;
+  font-family: 'Noto Nastaliq Urdu', serif;
+}
+
+body.urdu nav ul {
+  flex-direction: row-reverse;
+}
+
+#langToggle {
+  background-color: white;
+  color: #003366;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .logo-text {
+    font-size: 18px;
+  }
+}

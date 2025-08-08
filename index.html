@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Umrah Packages - Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo-container">
+        <img src="logo.jpg" alt="Logo" class="logo-img" />
+        <span class="logo-text lang-en">Al Bashaair Aviation</span>
+        <span class="logo-text lang-ur">البشایر ایوی ایشن</span>
+      </div>
+      <ul>
+        <li><a href="index.html" class="lang-en">Home</a></li>
+        <li><a href="index.html" class="lang-ur">ہوم</a></li>
+        <li><a href="packages.html" class="lang-en">Packages</a></li>
+        <li><a href="packages.html" class="lang-ur">پیکیجز</a></li>
+        <li><a href="contact.html" class="lang-en">Contact</a></li>
+        <li><a href="contact.html" class="lang-ur">رابطہ</a></li>
+        <li><button id="langToggle">اردو</button></li>
+      </ul>
+    </nav>
+  </header>
+<section class="hero" style="
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('kaaba.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 120px 20px;
+    text-align: center;
+    color: white;
+">
+    <h1 class="lang-en" style="font-size: 2.5rem; margin-bottom: 20px;">Plan Your Spiritual Journey with Us</h1>
+    <h1 class="lang-ur" style="font-size: 2.5rem; margin-bottom: 20px;">ہمارے ساتھ اپنی روحانی سفر کی منصوبہ بندی کریں</h1>
+    <p class="lang-en" style="font-size: 1.2rem; margin-bottom: 30px;">Affordable & reliable Umrah packages from Pakistan.</p>
+    <p class="lang-ur" style="font-size: 1.2rem; margin-bottom: 30px;">پاکستان سے سستے اور قابل اعتماد عمرہ پیکیجز۔</p>
+    
+    <a href="packages.html" class="btn lang-en" style="
+        background: #0066cc;
+        color: white;
+        padding: 12px 30px;
+        text-decoration: none;
+        border-radius: 5px;
+        display: inline-block;
+        margin: 10px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+    ">View Packages</a>
+    
+    <a href="packages.html" class="btn lang-ur" style="
+        background: #0066cc;
+        color: white;
+        padding: 12px 30px;
+        text-decoration: none;
+        border-radius: 5px;
+        display: inline-block;
+        margin: 10px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+    ">پیکیجز دیکھیں</a>
+</section>
+
+  <section class="about">
+    <h2 class="lang-en">Why Choose Us?</h2>
+    <h2 class="lang-ur">ہمیں کیوں منتخب کریں؟</h2>
+    <p class="lang-en">We provide premium and budget Umrah packages tailored for individuals and families across Pakistan.</p>
+    <p class="lang-ur">ہم پاکستان بھر کے افراد اور خاندانوں کے لیے اعلیٰ اور بجٹ عمرہ پیکیجز فراہم کرتے ہیں۔</p>
+  </section>
+
+<section class="contact" id="contact">
+  <!-- English Version -->
+  <div class="lang-en">
+    <h2>Contact Us</h2>
+    <p>Need help or want to book? Contact us!</p>
+    <div class="contact-links">
+      <a href="https://wa.me/923323706642" target="_blank" class="btn">WhatsApp Us</a>
+      <a href="mailto:ahmadmuddassir10@gmail.com" class="btn">Email Us</a>
+    </div>
+  </div>
+  
+  <!-- Urdu Version (hidden by default) -->
+  <div class="lang-ur" style="display: none;">
+    <h2>ہم سے رابطہ کریں</h2>
+    <p>!مدد کی ضرورت ہے یا بک کرنا چاہتے ہیں؟ ہم سے رابطہ کریں</p>
+    <div class="contact-links">
+      <a href="https://wa.me/923323706642" target="_blank" class="btn">واٹس ایپ</a>
+      <a href="mailto:ahmadmuddassir10@gmail.com" class="btn">ای میل</a>
+    </div>
+  </div>
+  
+  <!-- Language Toggle Button -->
+  <div class="lang-toggle">
+    <button onclick="toggleLanguage()">Switch to Urdu</button>
+  </div>
+</section>
+
+<script>
+  function toggleLanguage() {
+    const enElements = document.querySelectorAll('.lang-en');
+    const urElements = document.querySelectorAll('.lang-ur');
+    const button = document.querySelector('.lang-toggle button');
+    
+    enElements.forEach(el => el.style.display = el.style.display === 'none' ? 'block' : 'none');
+    urElements.forEach(el => el.style.display = el.style.display === 'none' ? 'block' : 'none');
+    
+    if (button.textContent === 'Switch to Urdu') {
+      button.textContent = 'انگریزی میں تبدیل کریں';
+    } else {
+      button.textContent = 'Switch to Urdu';
+    }
+  }
+</script>
+
+  <footer>
+    <p class="lang-en">&copy; 2025 Al Bashaair Aviation. All rights reserved.</p>
+    <p class="lang-ur">&copy; 2025 البشایر ایوی ایشن۔ جملہ حقوق محفوظ ہیں۔</p>
+  </footer>
+
+  <script>
+    const langToggle = document.getElementById("langToggle");
+    const urdu = document.querySelectorAll(".lang-ur");
+    const english = document.querySelectorAll(".lang-en");
+
+    langToggle.addEventListener("click", () => {
+      const isUrdu = langToggle.innerText === "اردو";
+      langToggle.innerText = isUrdu ? "English" : "اردو";
+      urdu.forEach(el => el.style.display = isUrdu ? "block" : "none");
+      english.forEach(el => el.style.display = isUrdu ? "none" : "block");
+      document.body.classList.toggle("urdu", isUrdu);
+    });
+
+    // Default to English
+    urdu.forEach(el => el.style.display = "none");
+  </script>
+</body>
+</html>
